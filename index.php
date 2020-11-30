@@ -24,6 +24,8 @@
                 <input type="text" class="form-control" id="number2" name="number2" required>
             </div>
             <button type="submit" class="btn btn-primary" name="add">Add</button>
+            <button type="submit" class="btn btn-primary" name="subtract">Subtract</button>
+            <button type="submit" class="btn btn-primary" name="multiply">Multiply</button>
         </form>
 
         <?php
@@ -35,6 +37,28 @@
 
                 echo "<h2>The result of adding $n1 and $n2 is $result";
             }
+
+            if(isset($_POST['subtract'])){
+               // TODO code subtract uitwerken
+                $n1 = $_POST['number1'];
+                $n2 = $_POST['number2'];
+                $calc = new Calculator();
+                $result = $calc->subtract($n1, $n2);
+
+                echo "<h2>The result of subtracting $n1 and $n2 is $result";
+            }
+
+             if(isset($_POST['multiply'])){
+                // TODO code multiply uitwerken
+                $n1 = $_POST['number1'];
+                $n2 = $_POST['number2'];
+                $calc = new Calculator();
+                $result = $calc->multiply($n1, $n2);
+
+                echo "<h2>The result of multiplying $n1 and $n2 is $result";
+             }
+
+
         ?>
         <script src="assets/js/bootstrap.min.js" ></sccript>
     </body>
